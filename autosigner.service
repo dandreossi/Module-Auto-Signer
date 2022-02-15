@@ -1,0 +1,13 @@
+[Unit]
+Description=Kernel Modules Autosigner
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/home/dandreos/Projects/moduleautosigner
+Type=oneshot
+RemainAfterExit=true
+ExecStop=/usr/bin/python3 /home/dandreos/Projects/moduleautosigner/main.py
+
+[Install]
+WantedBy=multi-user.target
